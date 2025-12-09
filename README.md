@@ -10,3 +10,5 @@ No arquivo main contém uma configuracao de modelo, por ela posso configurar o m
 
 Para executar o projeto localmente é preciso gerar uma chave de api diretamente no AI Studio e colocar no seu arquivo .env no formato:
 GEMINI_API_KEY="sua-chave-api"
+
+Por fim, para utilizar o categorizador basta inserir no terminal o produto a ser categorizado. 

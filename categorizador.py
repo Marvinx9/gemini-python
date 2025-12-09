@@ -37,9 +37,10 @@ def categorizar_produto(nome_produto, lista_categorias_possiveis):
 def main():
     lista_categorias_possiveis = "Eletrônicos Verdes,Moda Sustentável,Produtos de Limpeza Ecológicos,Alimentos Orgânicos, Produtos de Higiene Sustentáveis"
 
-    pergunta = "Escova de dentes de bambu"
-
-    print(f"Resposta: {categorizar_produto(pergunta, lista_categorias_possiveis)}")
+    produto = input("Informe o produto que você deseja classificar: ")
+    while produto != "":
+        print(f"Resposta: {categorizar_produto(produto, lista_categorias_possiveis)}")
+        produto = input("Informe o produto que você deseja classificar: ")
 
 if __name__ == "__main__":
     main()
