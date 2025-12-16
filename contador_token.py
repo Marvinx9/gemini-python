@@ -42,8 +42,8 @@ llm_20_flash = genai.GenerativeModel(
 )
 
 prompt = """
-    aqui vai o seu script para contar os tokens e avaliar o custo
-    """
+--COLOQUE AQUI O SEU PROMPT--
+"""
 
 quantidade_tokens = llm_20_flash.count_tokens(prompt)
 print(f"A quantidade de tokens é: {quantidade_tokens}")
