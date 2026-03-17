@@ -2,13 +2,21 @@
 
 Esse projeto se conecta com a AI do Gemini via API_KEY.
 
-No arquivo chamado (categorizador) preparo um prompt onde recebo um input contendo um produto e retorno a categoria que o produto melhor se enquadra.
+No arquivo denominado (contador_token_audio.py) se localiza o calculador de audio transcrição. Você precisa preencher a pasta em ./audio com o seu audio que deseja transcrever
 
-O prompt do sistema serve para dar diretrizes de como a AI deve se comportar quando ela receber uma pergunta.
+Variáveis de ambiente:
 
-No arquivo main contém uma configuracao de modelo, por ela posso configurar o máximo de caracteres de saída, nível de conecção entra as palavras, tipo de retorno (texto, imagem, audio, video, etc) e muito mais.
+Para arquivo de calculo para áudio (contador_token_audio.py) será preciso preenche essas variáveis:
+GEMINI_API_KEY coloque a chave da sua api do GCP
+GEMINI_MODELO informe o modelo do gemini que deseja calcular o preço
+PROMPT_TRANSCRICAO coloque o prompt que irá enviar junto ao arquivo de audio
+CUSTO_TEXTO_ENTRADA_USD_POR_MILHAO coloque o valor em USD do modelo para texto (entrada)
+CUSTO_AUDIO_ENTRADA_USD_POR_MILHAO coloque o valor em USD do modelo para audio (entrada)
+CUSTO_SAIDA_USD_POR_MILHAO coloque o valor em USD do modelo para (saída)
 
-Para executar o projeto localmente é preciso gerar uma chave de api diretamente no AI Studio e colocar no seu arquivo .env no formato:
-GEMINI_API_KEY="sua-chave-api"
-
-Por fim, para utilizar o categorizador basta inserir no terminal o produto a ser categorizado. 
+Para arquivo de calculo de apenas texto (contador_token_texto.py) será preciso preenche essas variáveis:
+GEMINI_API_KEY coloque a chave da sua api do GCP
+GEMINI_MODELO informe o modelo do gemini que deseja calcular o preço
+CUSTO_ENTRADA_USD_POR_MILHAO coloque o custo de entrada do modelo
+CUSTO_SAIDA_USD_POR_MILHAO coloque o custo de saida do modelo
+PROMPT coloque o prompt completo que você deseja calcular o preço

@@ -2,3 +2,5 @@
 env
 .vscode
 washington-icc-dev.json
+.venv
+__pycache__
